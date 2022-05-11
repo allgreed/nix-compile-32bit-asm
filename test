@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+./main < inputs/sorted
+./main < inputs/unsorted

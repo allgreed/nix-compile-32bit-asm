@@ -55,16 +55,11 @@ main:
 
     call print_arr_func
     
-    ;sorting
-
+    sorting:
+    ; compute border_pointer
     mov ebx, [arr]
-    ; offset
-    ; (n - 1) * 4 == n * 4 - 4
-    ; TODO: can this be done smarter?
     mov eax, [actual_arr_len]
-    dec eax
-    shl eax, 2
-    add ebx, eax
+    lea ebx, [ebx + eax * 4 - 4]
 
         enter_inner_loop:
         mov eax, [arr]

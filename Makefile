@@ -9,9 +9,12 @@ main: main.o
 run: main
 	./main < inputs/sorted
 
-.PHONY: watch debug
+.PHONY: watch debug test
 watch:
 	ls main.asm input | entr -c make run
 
 debug: main
 	gdb -x .gdbinit
+
+test: main
+	./test
