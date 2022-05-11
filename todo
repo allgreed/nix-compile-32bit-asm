@@ -1,2 +1,3 @@
-- p *((int*)arr)@6
+- p *((int*)arr)@actual_arr_len
 ^ make this a preloaded gdb function and refference actual array length
+actual_arr_len
